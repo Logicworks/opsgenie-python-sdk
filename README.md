@@ -51,24 +51,24 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 from __future__ import print_function
-import time
 import opsgenie_swagger
 from opsgenie_swagger.rest import ApiException
-from pprint import pprint
 
-# Configure API key authorization: GenieKey
-opsgenie_swagger.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# opsgenie_swagger.configuration.api_key_prefix['Authorization'] = 'Bearer'
-# create an instance of the API class
-api_instance = opsgenie_swagger.AccountApi()
+API_TOKEN = 'my_api_token'
+
+config = opsgenie_swagger.Configuration()
+config.api_key['Authorization'] = API_TOKEN
+config.api_key_prefix['Authorization'] = 'GenieKey'
+
+api_client = opsgenie_swagger.ApiClient(config)
+team_api = opsgenie_swagger.TeamApi(api_client)
 
 try:
     # Get Account Info
-    api_response = api_instance.get_info()
-    pprint(api_response)
+    api_response = team_api.list_teams()
+    print(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->get_info: %s\n" % e)
+    print("Exception when calling TeamApi->list_teams: %s\n" % e)
 
 ```
 

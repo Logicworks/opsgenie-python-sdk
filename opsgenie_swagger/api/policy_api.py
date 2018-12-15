@@ -38,11 +38,11 @@ class PolicyApi(object):
 
         Change execution order of the alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.change_alert_policy_order(policy_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.change_alert_policy_order(policy_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :param ChangeAlertPolicyOrderPayload body: Change order payload (required)
         :return: SuccessResponse
@@ -50,7 +50,7 @@ class PolicyApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.change_alert_policy_order_with_http_info(policy_id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.change_alert_policy_order_with_http_info(policy_id, body, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class PolicyApi(object):
 
         Change execution order of the alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.change_alert_policy_order_with_http_info(policy_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.change_alert_policy_order_with_http_info(policy_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :param ChangeAlertPolicyOrderPayload body: Change order payload (required)
         :return: SuccessResponse
@@ -74,7 +74,7 @@ class PolicyApi(object):
         """
 
         all_params = ['policy_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class PolicyApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,18 +141,18 @@ class PolicyApi(object):
 
         Creates a new alert policy  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_alert_policy(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_alert_policy(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AlertPolicy body: Payload of created alert policy (required)
         :return: CreateAlertPolicyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_alert_policy_with_http_info(body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_alert_policy_with_http_info(body, **kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class PolicyApi(object):
 
         Creates a new alert policy  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_alert_policy_with_http_info(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_alert_policy_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AlertPolicy body: Payload of created alert policy (required)
         :return: CreateAlertPolicyResponse
                  If the method is called asynchronously,
@@ -175,7 +175,7 @@ class PolicyApi(object):
         """
 
         all_params = ['body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class PolicyApi(object):
             files=local_var_files,
             response_type='CreateAlertPolicyResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -236,18 +236,18 @@ class PolicyApi(object):
 
         Delete alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_alert_policy(policy_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_alert_policy(policy_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_alert_policy_with_http_info(policy_id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_alert_policy_with_http_info(policy_id, **kwargs)  # noqa: E501
@@ -258,11 +258,11 @@ class PolicyApi(object):
 
         Delete alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_alert_policy_with_http_info(policy_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_alert_policy_with_http_info(policy_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
@@ -270,7 +270,7 @@ class PolicyApi(object):
         """
 
         all_params = ['policy_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -320,7 +320,7 @@ class PolicyApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -331,18 +331,18 @@ class PolicyApi(object):
 
         Disable the alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.disable_alert_policy(policy_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.disable_alert_policy(policy_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.disable_alert_policy_with_http_info(policy_id, **kwargs)  # noqa: E501
         else:
             (data) = self.disable_alert_policy_with_http_info(policy_id, **kwargs)  # noqa: E501
@@ -353,11 +353,11 @@ class PolicyApi(object):
 
         Disable the alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.disable_alert_policy_with_http_info(policy_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.disable_alert_policy_with_http_info(policy_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
@@ -365,7 +365,7 @@ class PolicyApi(object):
         """
 
         all_params = ['policy_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -415,7 +415,7 @@ class PolicyApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -426,18 +426,18 @@ class PolicyApi(object):
 
         Enable the alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.enable_alert_policy(policy_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enable_alert_policy(policy_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.enable_alert_policy_with_http_info(policy_id, **kwargs)  # noqa: E501
         else:
             (data) = self.enable_alert_policy_with_http_info(policy_id, **kwargs)  # noqa: E501
@@ -448,11 +448,11 @@ class PolicyApi(object):
 
         Enable the alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.enable_alert_policy_with_http_info(policy_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enable_alert_policy_with_http_info(policy_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
@@ -460,7 +460,7 @@ class PolicyApi(object):
         """
 
         all_params = ['policy_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -510,7 +510,7 @@ class PolicyApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -521,18 +521,18 @@ class PolicyApi(object):
 
         Used to get details of a single policy with id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_alert_policy(policy_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_alert_policy(policy_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :return: GetAlertPolicyResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_alert_policy_with_http_info(policy_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_alert_policy_with_http_info(policy_id, **kwargs)  # noqa: E501
@@ -543,11 +543,11 @@ class PolicyApi(object):
 
         Used to get details of a single policy with id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_alert_policy_with_http_info(policy_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_alert_policy_with_http_info(policy_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :return: GetAlertPolicyResponse
                  If the method is called asynchronously,
@@ -555,7 +555,7 @@ class PolicyApi(object):
         """
 
         all_params = ['policy_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -605,7 +605,7 @@ class PolicyApi(object):
             files=local_var_files,
             response_type='GetAlertPolicyResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -616,17 +616,17 @@ class PolicyApi(object):
 
         Returns list alert policies  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_alert_policies(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_alert_policies(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: ListAlertPoliciesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_alert_policies_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.list_alert_policies_with_http_info(**kwargs)  # noqa: E501
@@ -637,18 +637,18 @@ class PolicyApi(object):
 
         Returns list alert policies  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_alert_policies_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_alert_policies_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: ListAlertPoliciesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -692,7 +692,7 @@ class PolicyApi(object):
             files=local_var_files,
             response_type='ListAlertPoliciesResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -703,11 +703,11 @@ class PolicyApi(object):
 
         Update alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_alert_policy(policy_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_alert_policy(policy_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :param AlertPolicy body: Payload of updated alert policy (required)
         :return: SuccessResponse
@@ -715,7 +715,7 @@ class PolicyApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_alert_policy_with_http_info(policy_id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.update_alert_policy_with_http_info(policy_id, body, **kwargs)  # noqa: E501
@@ -726,11 +726,11 @@ class PolicyApi(object):
 
         Update alert policy with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_alert_policy_with_http_info(policy_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_alert_policy_with_http_info(policy_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str policy_id: Id of the requested policy (required)
         :param AlertPolicy body: Payload of updated alert policy (required)
         :return: SuccessResponse
@@ -739,7 +739,7 @@ class PolicyApi(object):
         """
 
         all_params = ['policy_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -795,7 +795,7 @@ class PolicyApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

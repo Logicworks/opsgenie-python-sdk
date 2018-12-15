@@ -38,11 +38,11 @@ class TeamRoutingRuleApi(object):
 
         Change the order of team routing rule with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.change_team_routing_rule_order(identifier, id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.change_team_routing_rule_order(identifier, id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str id: Id of the team routing rule (required)
         :param ChangeTeamRoutingRuleOrderPayload body: Request payload of change team routing rule order action (required)
@@ -52,7 +52,7 @@ class TeamRoutingRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.change_team_routing_rule_order_with_http_info(identifier, id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.change_team_routing_rule_order_with_http_info(identifier, id, body, **kwargs)  # noqa: E501
@@ -63,11 +63,11 @@ class TeamRoutingRuleApi(object):
 
         Change the order of team routing rule with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.change_team_routing_rule_order_with_http_info(identifier, id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.change_team_routing_rule_order_with_http_info(identifier, id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str id: Id of the team routing rule (required)
         :param ChangeTeamRoutingRuleOrderPayload body: Request payload of change team routing rule order action (required)
@@ -78,7 +78,7 @@ class TeamRoutingRuleApi(object):
         """
 
         all_params = ['identifier', 'id', 'body', 'team_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -142,7 +142,7 @@ class TeamRoutingRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -153,11 +153,11 @@ class TeamRoutingRuleApi(object):
 
         Creates a new team routing rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_team_routing_rule(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_team_routing_rule(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param CreateTeamRoutingRulePayload body: Request payload of createTeamRoutingRule (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -166,7 +166,7 @@ class TeamRoutingRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_team_routing_rule_with_http_info(identifier, body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_team_routing_rule_with_http_info(identifier, body, **kwargs)  # noqa: E501
@@ -177,11 +177,11 @@ class TeamRoutingRuleApi(object):
 
         Creates a new team routing rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_team_routing_rule_with_http_info(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_team_routing_rule_with_http_info(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param CreateTeamRoutingRulePayload body: Request payload of createTeamRoutingRule (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -191,7 +191,7 @@ class TeamRoutingRuleApi(object):
         """
 
         all_params = ['identifier', 'body', 'team_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -249,7 +249,7 @@ class TeamRoutingRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -260,11 +260,11 @@ class TeamRoutingRuleApi(object):
 
         Delete team routing rule with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_team_routing_rule(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_team_routing_rule(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str id: Id of the team routing rule (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -273,7 +273,7 @@ class TeamRoutingRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_team_routing_rule_with_http_info(identifier, id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_team_routing_rule_with_http_info(identifier, id, **kwargs)  # noqa: E501
@@ -284,11 +284,11 @@ class TeamRoutingRuleApi(object):
 
         Delete team routing rule with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_team_routing_rule_with_http_info(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_team_routing_rule_with_http_info(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str id: Id of the team routing rule (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -298,7 +298,7 @@ class TeamRoutingRuleApi(object):
         """
 
         all_params = ['identifier', 'id', 'team_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -356,7 +356,7 @@ class TeamRoutingRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -367,11 +367,11 @@ class TeamRoutingRuleApi(object):
 
         Returns team routing rule with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_team_routing_rule(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_team_routing_rule(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str id: Id of the team routing rule (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -380,7 +380,7 @@ class TeamRoutingRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_team_routing_rule_with_http_info(identifier, id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_team_routing_rule_with_http_info(identifier, id, **kwargs)  # noqa: E501
@@ -391,11 +391,11 @@ class TeamRoutingRuleApi(object):
 
         Returns team routing rule with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_team_routing_rule_with_http_info(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_team_routing_rule_with_http_info(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str id: Id of the team routing rule (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -405,7 +405,7 @@ class TeamRoutingRuleApi(object):
         """
 
         all_params = ['identifier', 'id', 'team_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -463,7 +463,7 @@ class TeamRoutingRuleApi(object):
             files=local_var_files,
             response_type='GetTeamRoutingRuleResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -474,11 +474,11 @@ class TeamRoutingRuleApi(object):
 
         Returns list of team routing rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_team_routing_rules(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_team_routing_rules(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
         :return: ListTeamRoutingRulesResponse
@@ -486,7 +486,7 @@ class TeamRoutingRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_team_routing_rules_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.list_team_routing_rules_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -497,11 +497,11 @@ class TeamRoutingRuleApi(object):
 
         Returns list of team routing rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_team_routing_rules_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_team_routing_rules_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
         :return: ListTeamRoutingRulesResponse
@@ -510,7 +510,7 @@ class TeamRoutingRuleApi(object):
         """
 
         all_params = ['identifier', 'team_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -562,7 +562,7 @@ class TeamRoutingRuleApi(object):
             files=local_var_files,
             response_type='ListTeamRoutingRulesResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -573,11 +573,11 @@ class TeamRoutingRuleApi(object):
 
         Update routing rule of the team  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_team_routing_rule(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_team_routing_rule(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str id: Id of the team routing rule (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -587,7 +587,7 @@ class TeamRoutingRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_team_routing_rule_with_http_info(identifier, id, **kwargs)  # noqa: E501
         else:
             (data) = self.update_team_routing_rule_with_http_info(identifier, id, **kwargs)  # noqa: E501
@@ -598,11 +598,11 @@ class TeamRoutingRuleApi(object):
 
         Update routing rule of the team  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_team_routing_rule_with_http_info(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_team_routing_rule_with_http_info(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str id: Id of the team routing rule (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -613,7 +613,7 @@ class TeamRoutingRuleApi(object):
         """
 
         all_params = ['identifier', 'id', 'team_identifier_type', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -673,7 +673,7 @@ class TeamRoutingRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

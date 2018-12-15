@@ -38,11 +38,11 @@ class TeamMemberApi(object):
 
         Adds a member to team with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_team_member(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_team_member(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param AddTeamMemberPayload body: Request payload of added team member (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -51,7 +51,7 @@ class TeamMemberApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.add_team_member_with_http_info(identifier, body, **kwargs)  # noqa: E501
         else:
             (data) = self.add_team_member_with_http_info(identifier, body, **kwargs)  # noqa: E501
@@ -62,11 +62,11 @@ class TeamMemberApi(object):
 
         Adds a member to team with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.add_team_member_with_http_info(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_team_member_with_http_info(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param AddTeamMemberPayload body: Request payload of added team member (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -76,7 +76,7 @@ class TeamMemberApi(object):
         """
 
         all_params = ['identifier', 'body', 'team_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -134,7 +134,7 @@ class TeamMemberApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -145,11 +145,11 @@ class TeamMemberApi(object):
 
         Deletes the member of team with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_team_member(identifier, member_identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_team_member(identifier, member_identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str member_identifier: User id or username of member for removal (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -158,7 +158,7 @@ class TeamMemberApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_team_member_with_http_info(identifier, member_identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_team_member_with_http_info(identifier, member_identifier, **kwargs)  # noqa: E501
@@ -169,11 +169,11 @@ class TeamMemberApi(object):
 
         Deletes the member of team with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_team_member_with_http_info(identifier, member_identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_team_member_with_http_info(identifier, member_identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the team (required)
         :param str member_identifier: User id or username of member for removal (required)
         :param str team_identifier_type: Type of the identifier. Possible values are 'id' and 'name'. Default value is 'id'
@@ -183,7 +183,7 @@ class TeamMemberApi(object):
         """
 
         all_params = ['identifier', 'member_identifier', 'team_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -241,7 +241,7 @@ class TeamMemberApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

@@ -38,11 +38,11 @@ class ScheduleOverrideApi(object):
 
         Creates a schedule override for the specified user and schedule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_schedule_override(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_schedule_override(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param CreateScheduleOverridePayload body: Request payload of created schedule override (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -51,7 +51,7 @@ class ScheduleOverrideApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_schedule_override_with_http_info(identifier, body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_schedule_override_with_http_info(identifier, body, **kwargs)  # noqa: E501
@@ -62,11 +62,11 @@ class ScheduleOverrideApi(object):
 
         Creates a schedule override for the specified user and schedule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_schedule_override_with_http_info(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_schedule_override_with_http_info(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param CreateScheduleOverridePayload body: Request payload of created schedule override (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -76,7 +76,7 @@ class ScheduleOverrideApi(object):
         """
 
         all_params = ['identifier', 'body', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -134,7 +134,7 @@ class ScheduleOverrideApi(object):
             files=local_var_files,
             response_type='CreateScheduleOverrideResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -145,11 +145,11 @@ class ScheduleOverrideApi(object):
 
         Delete schedule override with given alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_schedule_override(identifier, alias, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_schedule_override(identifier, alias, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str alias: Alias of the schedule override (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -158,7 +158,7 @@ class ScheduleOverrideApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_schedule_override_with_http_info(identifier, alias, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_schedule_override_with_http_info(identifier, alias, **kwargs)  # noqa: E501
@@ -169,11 +169,11 @@ class ScheduleOverrideApi(object):
 
         Delete schedule override with given alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_schedule_override_with_http_info(identifier, alias, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_schedule_override_with_http_info(identifier, alias, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str alias: Alias of the schedule override (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -183,7 +183,7 @@ class ScheduleOverrideApi(object):
         """
 
         all_params = ['identifier', 'alias', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -241,7 +241,7 @@ class ScheduleOverrideApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -252,11 +252,11 @@ class ScheduleOverrideApi(object):
 
         Gets schedule override details with given alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_schedule_override(identifier, alias, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_schedule_override(identifier, alias, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str alias: Alias of the schedule override (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -265,7 +265,7 @@ class ScheduleOverrideApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_schedule_override_with_http_info(identifier, alias, **kwargs)  # noqa: E501
         else:
             (data) = self.get_schedule_override_with_http_info(identifier, alias, **kwargs)  # noqa: E501
@@ -276,11 +276,11 @@ class ScheduleOverrideApi(object):
 
         Gets schedule override details with given alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_schedule_override_with_http_info(identifier, alias, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_schedule_override_with_http_info(identifier, alias, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str alias: Alias of the schedule override (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -290,7 +290,7 @@ class ScheduleOverrideApi(object):
         """
 
         all_params = ['identifier', 'alias', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -348,7 +348,7 @@ class ScheduleOverrideApi(object):
             files=local_var_files,
             response_type='GetScheduleOverrideResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -359,11 +359,11 @@ class ScheduleOverrideApi(object):
 
         Returns list of schedule overrides  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_schedule_override(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_schedule_override(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: ListScheduleOverrideResponse
@@ -371,7 +371,7 @@ class ScheduleOverrideApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_schedule_override_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.list_schedule_override_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -382,11 +382,11 @@ class ScheduleOverrideApi(object):
 
         Returns list of schedule overrides  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_schedule_override_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_schedule_override_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: ListScheduleOverrideResponse
@@ -395,7 +395,7 @@ class ScheduleOverrideApi(object):
         """
 
         all_params = ['identifier', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -447,7 +447,7 @@ class ScheduleOverrideApi(object):
             files=local_var_files,
             response_type='ListScheduleOverrideResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -458,11 +458,11 @@ class ScheduleOverrideApi(object):
 
         Update schedule override with given alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_schedule_override(identifier, alias, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_schedule_override(identifier, alias, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str alias: Alias of the schedule override (required)
         :param UpdateScheduleOverridePayload body: Request payload of update schedule override (required)
@@ -472,7 +472,7 @@ class ScheduleOverrideApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_schedule_override_with_http_info(identifier, alias, body, **kwargs)  # noqa: E501
         else:
             (data) = self.update_schedule_override_with_http_info(identifier, alias, body, **kwargs)  # noqa: E501
@@ -483,11 +483,11 @@ class ScheduleOverrideApi(object):
 
         Update schedule override with given alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_schedule_override_with_http_info(identifier, alias, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_schedule_override_with_http_info(identifier, alias, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str alias: Alias of the schedule override (required)
         :param UpdateScheduleOverridePayload body: Request payload of update schedule override (required)
@@ -498,7 +498,7 @@ class ScheduleOverrideApi(object):
         """
 
         all_params = ['identifier', 'alias', 'body', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -562,7 +562,7 @@ class ScheduleOverrideApi(object):
             files=local_var_files,
             response_type='UpdateScheduleOverrideResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

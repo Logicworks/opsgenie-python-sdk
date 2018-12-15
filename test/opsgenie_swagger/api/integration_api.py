@@ -38,18 +38,18 @@ class IntegrationApi(object):
 
         Authenticates integration with given type  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.authenticate_integration(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.authenticate_integration(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AuthenticateIntegrationPayload body: Request payload to authenticate integration (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.authenticate_integration_with_http_info(body, **kwargs)  # noqa: E501
         else:
             (data) = self.authenticate_integration_with_http_info(body, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class IntegrationApi(object):
 
         Authenticates integration with given type  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.authenticate_integration_with_http_info(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.authenticate_integration_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AuthenticateIntegrationPayload body: Request payload to authenticate integration (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class IntegrationApi(object):
         """
 
         all_params = ['body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -122,7 +122,7 @@ class IntegrationApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -133,18 +133,18 @@ class IntegrationApi(object):
 
         Creates a new integration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_integration(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_integration(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Integration body: Request payload of created integration (required)
         :return: CreateIntegrationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_integration_with_http_info(body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_integration_with_http_info(body, **kwargs)  # noqa: E501
@@ -155,11 +155,11 @@ class IntegrationApi(object):
 
         Creates a new integration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_integration_with_http_info(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_integration_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Integration body: Request payload of created integration (required)
         :return: CreateIntegrationResponse
                  If the method is called asynchronously,
@@ -167,7 +167,7 @@ class IntegrationApi(object):
         """
 
         all_params = ['body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -217,7 +217,7 @@ class IntegrationApi(object):
             files=local_var_files,
             response_type='CreateIntegrationResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -228,18 +228,18 @@ class IntegrationApi(object):
 
         Delete integration with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_integration(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_integration(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_integration_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_integration_with_http_info(id, **kwargs)  # noqa: E501
@@ -250,11 +250,11 @@ class IntegrationApi(object):
 
         Delete integration with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_integration_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_integration_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
@@ -262,7 +262,7 @@ class IntegrationApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -312,7 +312,7 @@ class IntegrationApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -323,18 +323,18 @@ class IntegrationApi(object):
 
         Disable integration with given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.disable_integration(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.disable_integration(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :return: DisableIntegrationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.disable_integration_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.disable_integration_with_http_info(id, **kwargs)  # noqa: E501
@@ -345,11 +345,11 @@ class IntegrationApi(object):
 
         Disable integration with given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.disable_integration_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.disable_integration_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :return: DisableIntegrationResponse
                  If the method is called asynchronously,
@@ -357,7 +357,7 @@ class IntegrationApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -407,7 +407,7 @@ class IntegrationApi(object):
             files=local_var_files,
             response_type='DisableIntegrationResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -418,18 +418,18 @@ class IntegrationApi(object):
 
         Enable integration with given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.enable_integration(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enable_integration(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :return: EnableIntegrationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.enable_integration_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.enable_integration_with_http_info(id, **kwargs)  # noqa: E501
@@ -440,11 +440,11 @@ class IntegrationApi(object):
 
         Enable integration with given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.enable_integration_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enable_integration_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :return: EnableIntegrationResponse
                  If the method is called asynchronously,
@@ -452,7 +452,7 @@ class IntegrationApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -502,7 +502,7 @@ class IntegrationApi(object):
             files=local_var_files,
             response_type='EnableIntegrationResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -513,18 +513,18 @@ class IntegrationApi(object):
 
         Returns integration with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_integration(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_integration(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :return: GetIntegrationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_integration_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_integration_with_http_info(id, **kwargs)  # noqa: E501
@@ -535,11 +535,11 @@ class IntegrationApi(object):
 
         Returns integration with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_integration_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_integration_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :return: GetIntegrationResponse
                  If the method is called asynchronously,
@@ -547,7 +547,7 @@ class IntegrationApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -597,7 +597,7 @@ class IntegrationApi(object):
             files=local_var_files,
             response_type='GetIntegrationResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -608,11 +608,11 @@ class IntegrationApi(object):
 
         Returns list of integrations with given parameters  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_integrations(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_integrations(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str type: Type of the integration (For instance, \"API\" for API Integration). If type parameter is given, the result will be filtered by type
         :param str team_id: The ID of the team. If the team ID parameter is given, the result will be filtered by teamId
         :param str team_name: The name of the team. If the team name parameter is given, the result will be filtered by teamName
@@ -621,7 +621,7 @@ class IntegrationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_integrations_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.list_integrations_with_http_info(**kwargs)  # noqa: E501
@@ -632,11 +632,11 @@ class IntegrationApi(object):
 
         Returns list of integrations with given parameters  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_integrations_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_integrations_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str type: Type of the integration (For instance, \"API\" for API Integration). If type parameter is given, the result will be filtered by type
         :param str team_id: The ID of the team. If the team ID parameter is given, the result will be filtered by teamId
         :param str team_name: The name of the team. If the team name parameter is given, the result will be filtered by teamName
@@ -646,7 +646,7 @@ class IntegrationApi(object):
         """
 
         all_params = ['type', 'team_id', 'team_name']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -696,7 +696,7 @@ class IntegrationApi(object):
             files=local_var_files,
             response_type='ListIntegrationsResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -707,11 +707,11 @@ class IntegrationApi(object):
 
         Update integration with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_integration(id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_integration(id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :param Integration body: Request payload of update integration action (required)
         :return: UpdateIntegrationResponse
@@ -719,7 +719,7 @@ class IntegrationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_integration_with_http_info(id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.update_integration_with_http_info(id, body, **kwargs)  # noqa: E501
@@ -730,11 +730,11 @@ class IntegrationApi(object):
 
         Update integration with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_integration_with_http_info(id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_integration_with_http_info(id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Integration Id (required)
         :param Integration body: Request payload of update integration action (required)
         :return: UpdateIntegrationResponse
@@ -743,7 +743,7 @@ class IntegrationApi(object):
         """
 
         all_params = ['id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -799,7 +799,7 @@ class IntegrationApi(object):
             files=local_var_files,
             response_type='UpdateIntegrationResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

@@ -38,11 +38,11 @@ class ContactApi(object):
 
         Creates a new contact  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_contact(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_contact(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param CreateContactPayload body: Request payload of creating contact action
         :return: SuccessResponse
@@ -50,7 +50,7 @@ class ContactApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_contact_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.create_contact_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class ContactApi(object):
 
         Creates a new contact  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_contact_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_contact_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param CreateContactPayload body: Request payload of creating contact action
         :return: SuccessResponse
@@ -74,7 +74,7 @@ class ContactApi(object):
         """
 
         all_params = ['identifier', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class ContactApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,11 +137,11 @@ class ContactApi(object):
 
         Delete contact using contact id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_contact(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_contact(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :return: SuccessResponse
@@ -149,7 +149,7 @@ class ContactApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
@@ -160,11 +160,11 @@ class ContactApi(object):
 
         Delete contact using contact id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_contact_with_http_info(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_contact_with_http_info(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :return: SuccessResponse
@@ -173,7 +173,7 @@ class ContactApi(object):
         """
 
         all_params = ['identifier', 'contact_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -229,7 +229,7 @@ class ContactApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -240,11 +240,11 @@ class ContactApi(object):
 
         Disable the contact of the user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.disable_contact(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.disable_contact(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :return: SuccessResponse
@@ -252,7 +252,7 @@ class ContactApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.disable_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
         else:
             (data) = self.disable_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
@@ -263,11 +263,11 @@ class ContactApi(object):
 
         Disable the contact of the user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.disable_contact_with_http_info(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.disable_contact_with_http_info(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :return: SuccessResponse
@@ -276,7 +276,7 @@ class ContactApi(object):
         """
 
         all_params = ['identifier', 'contact_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -332,7 +332,7 @@ class ContactApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -343,11 +343,11 @@ class ContactApi(object):
 
         Enable the contact of the user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.enable_contact(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enable_contact(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :return: SuccessResponse
@@ -355,7 +355,7 @@ class ContactApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.enable_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
         else:
             (data) = self.enable_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
@@ -366,11 +366,11 @@ class ContactApi(object):
 
         Enable the contact of the user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.enable_contact_with_http_info(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enable_contact_with_http_info(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :return: SuccessResponse
@@ -379,7 +379,7 @@ class ContactApi(object):
         """
 
         all_params = ['identifier', 'contact_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -435,7 +435,7 @@ class ContactApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -446,11 +446,11 @@ class ContactApi(object):
 
         Returns contact with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_contact(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_contact(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :return: GetContactResponse
@@ -458,7 +458,7 @@ class ContactApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
@@ -469,11 +469,11 @@ class ContactApi(object):
 
         Returns contact with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_contact_with_http_info(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_contact_with_http_info(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :return: GetContactResponse
@@ -482,7 +482,7 @@ class ContactApi(object):
         """
 
         all_params = ['identifier', 'contact_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -538,7 +538,7 @@ class ContactApi(object):
             files=local_var_files,
             response_type='GetContactResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -549,18 +549,18 @@ class ContactApi(object):
 
         Returns list of contacts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_contacts(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_contacts(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :return: ListContactsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_contacts_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.list_contacts_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -571,11 +571,11 @@ class ContactApi(object):
 
         Returns list of contacts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_contacts_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_contacts_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :return: ListContactsResponse
                  If the method is called asynchronously,
@@ -583,7 +583,7 @@ class ContactApi(object):
         """
 
         all_params = ['identifier']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -633,7 +633,7 @@ class ContactApi(object):
             files=local_var_files,
             response_type='ListContactsResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -644,11 +644,11 @@ class ContactApi(object):
 
         Update contact of the user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_contact(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_contact(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :param UpdateContactPayload body: Request payload of update contact action
@@ -657,7 +657,7 @@ class ContactApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
         else:
             (data) = self.update_contact_with_http_info(identifier, contact_id, **kwargs)  # noqa: E501
@@ -668,11 +668,11 @@ class ContactApi(object):
 
         Update contact of the user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_contact_with_http_info(identifier, contact_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_contact_with_http_info(identifier, contact_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str contact_id: Id of the contact (required)
         :param UpdateContactPayload body: Request payload of update contact action
@@ -682,7 +682,7 @@ class ContactApi(object):
         """
 
         all_params = ['identifier', 'contact_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -740,7 +740,7 @@ class ContactApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

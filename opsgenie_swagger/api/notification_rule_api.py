@@ -38,11 +38,11 @@ class NotificationRuleApi(object):
 
         Changes order of a notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.change_notification_rule_order(identifier, rule_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.change_notification_rule_order(identifier, rule_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :param ChangeNotificationRuleOrderPayload body: Request payload of change order of notification rule (required)
@@ -51,7 +51,7 @@ class NotificationRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.change_notification_rule_order_with_http_info(identifier, rule_id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.change_notification_rule_order_with_http_info(identifier, rule_id, body, **kwargs)  # noqa: E501
@@ -62,11 +62,11 @@ class NotificationRuleApi(object):
 
         Changes order of a notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.change_notification_rule_order_with_http_info(identifier, rule_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.change_notification_rule_order_with_http_info(identifier, rule_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :param ChangeNotificationRuleOrderPayload body: Request payload of change order of notification rule (required)
@@ -76,7 +76,7 @@ class NotificationRuleApi(object):
         """
 
         all_params = ['identifier', 'rule_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -138,7 +138,7 @@ class NotificationRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -149,11 +149,11 @@ class NotificationRuleApi(object):
 
         Creates a new notification rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_notification_rule(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_notification_rule(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param CreateNotificationRulePayload body: Request payload of create notification rule (required)
         :return: CreateNotificationRuleResponse
@@ -161,7 +161,7 @@ class NotificationRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_notification_rule_with_http_info(identifier, body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_notification_rule_with_http_info(identifier, body, **kwargs)  # noqa: E501
@@ -172,11 +172,11 @@ class NotificationRuleApi(object):
 
         Creates a new notification rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_notification_rule_with_http_info(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_notification_rule_with_http_info(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param CreateNotificationRulePayload body: Request payload of create notification rule (required)
         :return: CreateNotificationRuleResponse
@@ -185,7 +185,7 @@ class NotificationRuleApi(object):
         """
 
         all_params = ['identifier', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -241,7 +241,7 @@ class NotificationRuleApi(object):
             files=local_var_files,
             response_type='CreateNotificationRuleResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -252,11 +252,11 @@ class NotificationRuleApi(object):
 
         Deletes a notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_notification_rule(identifier, rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_notification_rule(identifier, rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :return: SuccessResponse
@@ -264,7 +264,7 @@ class NotificationRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_notification_rule_with_http_info(identifier, rule_id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_notification_rule_with_http_info(identifier, rule_id, **kwargs)  # noqa: E501
@@ -275,11 +275,11 @@ class NotificationRuleApi(object):
 
         Deletes a notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_notification_rule_with_http_info(identifier, rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_notification_rule_with_http_info(identifier, rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :return: SuccessResponse
@@ -288,7 +288,7 @@ class NotificationRuleApi(object):
         """
 
         all_params = ['identifier', 'rule_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -344,7 +344,7 @@ class NotificationRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -355,11 +355,11 @@ class NotificationRuleApi(object):
 
         Disables a notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.disable_notification_rule(identifier, rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.disable_notification_rule(identifier, rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :return: SuccessResponse
@@ -367,7 +367,7 @@ class NotificationRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.disable_notification_rule_with_http_info(identifier, rule_id, **kwargs)  # noqa: E501
         else:
             (data) = self.disable_notification_rule_with_http_info(identifier, rule_id, **kwargs)  # noqa: E501
@@ -378,11 +378,11 @@ class NotificationRuleApi(object):
 
         Disables a notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.disable_notification_rule_with_http_info(identifier, rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.disable_notification_rule_with_http_info(identifier, rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :return: SuccessResponse
@@ -391,7 +391,7 @@ class NotificationRuleApi(object):
         """
 
         all_params = ['identifier', 'rule_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -447,7 +447,7 @@ class NotificationRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -458,11 +458,11 @@ class NotificationRuleApi(object):
 
         Enables a notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.enable_notification_rule(identifier, rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enable_notification_rule(identifier, rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :return: SuccessResponse
@@ -470,7 +470,7 @@ class NotificationRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.enable_notification_rule_with_http_info(identifier, rule_id, **kwargs)  # noqa: E501
         else:
             (data) = self.enable_notification_rule_with_http_info(identifier, rule_id, **kwargs)  # noqa: E501
@@ -481,11 +481,11 @@ class NotificationRuleApi(object):
 
         Enables a notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.enable_notification_rule_with_http_info(identifier, rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enable_notification_rule_with_http_info(identifier, rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :return: SuccessResponse
@@ -494,7 +494,7 @@ class NotificationRuleApi(object):
         """
 
         all_params = ['identifier', 'rule_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -550,7 +550,7 @@ class NotificationRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -561,11 +561,11 @@ class NotificationRuleApi(object):
 
         Returns notification rule with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_notification_rule(identifier, rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_notification_rule(identifier, rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :return: GetNotificationRuleResponse
@@ -573,7 +573,7 @@ class NotificationRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_notification_rule_with_http_info(identifier, rule_id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_notification_rule_with_http_info(identifier, rule_id, **kwargs)  # noqa: E501
@@ -584,11 +584,11 @@ class NotificationRuleApi(object):
 
         Returns notification rule with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_notification_rule_with_http_info(identifier, rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_notification_rule_with_http_info(identifier, rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :return: GetNotificationRuleResponse
@@ -597,7 +597,7 @@ class NotificationRuleApi(object):
         """
 
         all_params = ['identifier', 'rule_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -653,7 +653,7 @@ class NotificationRuleApi(object):
             files=local_var_files,
             response_type='GetNotificationRuleResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -664,18 +664,18 @@ class NotificationRuleApi(object):
 
         Returns list of notification rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_notification_rules(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_notification_rules(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :return: ListNotificationRulesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_notification_rules_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.list_notification_rules_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -686,11 +686,11 @@ class NotificationRuleApi(object):
 
         Returns list of notification rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_notification_rules_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_notification_rules_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :return: ListNotificationRulesResponse
                  If the method is called asynchronously,
@@ -698,7 +698,7 @@ class NotificationRuleApi(object):
         """
 
         all_params = ['identifier']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -748,7 +748,7 @@ class NotificationRuleApi(object):
             files=local_var_files,
             response_type='ListNotificationRulesResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -759,11 +759,11 @@ class NotificationRuleApi(object):
 
         Updates the notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_notification_rule(identifier, rule_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_notification_rule(identifier, rule_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :param UpdateNotificationRulePayload body: Request payload of update notification rule (required)
@@ -772,7 +772,7 @@ class NotificationRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_notification_rule_with_http_info(identifier, rule_id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.update_notification_rule_with_http_info(identifier, rule_id, body, **kwargs)  # noqa: E501
@@ -783,11 +783,11 @@ class NotificationRuleApi(object):
 
         Updates the notification rule with given notification rule id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_notification_rule_with_http_info(identifier, rule_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_notification_rule_with_http_info(identifier, rule_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the user to be searched (required)
         :param str rule_id: Id of the notification rule that step will belong to. (required)
         :param UpdateNotificationRulePayload body: Request payload of update notification rule (required)
@@ -797,7 +797,7 @@ class NotificationRuleApi(object):
         """
 
         all_params = ['identifier', 'rule_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -859,7 +859,7 @@ class NotificationRuleApi(object):
             files=local_var_files,
             response_type='UpdateNotificationRuleResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

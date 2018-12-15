@@ -38,18 +38,18 @@ class ForwardingRuleApi(object):
 
         Creates a new forwarding rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_forwarding_rule(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_forwarding_rule(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param CreateForwardingRulePayload body: Request payload to created forwarding rule (required)
         :return: CreateForwardingRuleResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_forwarding_rule_with_http_info(body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_forwarding_rule_with_http_info(body, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class ForwardingRuleApi(object):
 
         Creates a new forwarding rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_forwarding_rule_with_http_info(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_forwarding_rule_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param CreateForwardingRulePayload body: Request payload to created forwarding rule (required)
         :return: CreateForwardingRuleResponse
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class ForwardingRuleApi(object):
         """
 
         all_params = ['body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -122,7 +122,7 @@ class ForwardingRuleApi(object):
             files=local_var_files,
             response_type='CreateForwardingRuleResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -133,11 +133,11 @@ class ForwardingRuleApi(object):
 
         Deletes forwarding rule with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_forwarding_rule(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_forwarding_rule(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the forwarding rule which could be forwarding rule 'id' or 'alias' (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'alias'
         :return: SuccessResponse
@@ -145,7 +145,7 @@ class ForwardingRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_forwarding_rule_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_forwarding_rule_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -156,11 +156,11 @@ class ForwardingRuleApi(object):
 
         Deletes forwarding rule with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_forwarding_rule_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_forwarding_rule_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the forwarding rule which could be forwarding rule 'id' or 'alias' (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'alias'
         :return: SuccessResponse
@@ -169,7 +169,7 @@ class ForwardingRuleApi(object):
         """
 
         all_params = ['identifier', 'identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -221,7 +221,7 @@ class ForwardingRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -232,11 +232,11 @@ class ForwardingRuleApi(object):
 
         Returns forwarding rule with given id or alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_forwarding_rule(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_forwarding_rule(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the forwarding rule which could be forwarding rule 'id' or 'alias' (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'alias'
         :return: GetForwardingRuleResponse
@@ -244,7 +244,7 @@ class ForwardingRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_forwarding_rule_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.get_forwarding_rule_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -255,11 +255,11 @@ class ForwardingRuleApi(object):
 
         Returns forwarding rule with given id or alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_forwarding_rule_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_forwarding_rule_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the forwarding rule which could be forwarding rule 'id' or 'alias' (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'alias'
         :return: GetForwardingRuleResponse
@@ -268,7 +268,7 @@ class ForwardingRuleApi(object):
         """
 
         all_params = ['identifier', 'identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -320,7 +320,7 @@ class ForwardingRuleApi(object):
             files=local_var_files,
             response_type='GetForwardingRuleResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -331,17 +331,17 @@ class ForwardingRuleApi(object):
 
         Returns list of forwarding rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_forwarding_rules(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_forwarding_rules(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: ListForwardingRulesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_forwarding_rules_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.list_forwarding_rules_with_http_info(**kwargs)  # noqa: E501
@@ -352,18 +352,18 @@ class ForwardingRuleApi(object):
 
         Returns list of forwarding rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_forwarding_rules_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_forwarding_rules_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: ListForwardingRulesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -407,7 +407,7 @@ class ForwardingRuleApi(object):
             files=local_var_files,
             response_type='ListForwardingRulesResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -418,11 +418,11 @@ class ForwardingRuleApi(object):
 
         Update forwarding rule with given rule id or alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_forwarding_rule(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_forwarding_rule(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the forwarding rule which could be forwarding rule 'id' or 'alias' (required)
         :param UpdateForwardingRulePayload body: Request payload of update forwarding rule action (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'alias'
@@ -431,7 +431,7 @@ class ForwardingRuleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_forwarding_rule_with_http_info(identifier, body, **kwargs)  # noqa: E501
         else:
             (data) = self.update_forwarding_rule_with_http_info(identifier, body, **kwargs)  # noqa: E501
@@ -442,11 +442,11 @@ class ForwardingRuleApi(object):
 
         Update forwarding rule with given rule id or alias  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_forwarding_rule_with_http_info(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_forwarding_rule_with_http_info(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of the forwarding rule which could be forwarding rule 'id' or 'alias' (required)
         :param UpdateForwardingRulePayload body: Request payload of update forwarding rule action (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'alias'
@@ -456,7 +456,7 @@ class ForwardingRuleApi(object):
         """
 
         all_params = ['identifier', 'body', 'identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -514,7 +514,7 @@ class ForwardingRuleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

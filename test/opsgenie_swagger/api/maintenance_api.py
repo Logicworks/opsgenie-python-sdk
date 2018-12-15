@@ -38,18 +38,18 @@ class MaintenanceApi(object):
 
         Cancel maintenance with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.cancel_maintenance(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.cancel_maintenance(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Identifier of the maintenance to be searched (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.cancel_maintenance_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.cancel_maintenance_with_http_info(id, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class MaintenanceApi(object):
 
         Cancel maintenance with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.cancel_maintenance_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.cancel_maintenance_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Identifier of the maintenance to be searched (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class MaintenanceApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -122,7 +122,7 @@ class MaintenanceApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -133,18 +133,18 @@ class MaintenanceApi(object):
 
         Creates a new maintenance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_maintenance(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_maintenance(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param CreateMaintenancePayload body: Request payload of the maintenance object (required)
         :return: CreateMaintenanceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_maintenance_with_http_info(body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_maintenance_with_http_info(body, **kwargs)  # noqa: E501
@@ -155,11 +155,11 @@ class MaintenanceApi(object):
 
         Creates a new maintenance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_maintenance_with_http_info(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_maintenance_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param CreateMaintenancePayload body: Request payload of the maintenance object (required)
         :return: CreateMaintenanceResponse
                  If the method is called asynchronously,
@@ -167,7 +167,7 @@ class MaintenanceApi(object):
         """
 
         all_params = ['body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -217,7 +217,7 @@ class MaintenanceApi(object):
             files=local_var_files,
             response_type='CreateMaintenanceResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -228,18 +228,18 @@ class MaintenanceApi(object):
 
         Delete maintenance with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_maintenance(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_maintenance(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Identifier of the maintenance to be searched (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_maintenance_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_maintenance_with_http_info(id, **kwargs)  # noqa: E501
@@ -250,11 +250,11 @@ class MaintenanceApi(object):
 
         Delete maintenance with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_maintenance_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_maintenance_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Identifier of the maintenance to be searched (required)
         :return: SuccessResponse
                  If the method is called asynchronously,
@@ -262,7 +262,7 @@ class MaintenanceApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -312,7 +312,7 @@ class MaintenanceApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -323,18 +323,18 @@ class MaintenanceApi(object):
 
         Returns maintenance with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_maintenance(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_maintenance(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Identifier of the maintenance to be searched (required)
         :return: GetMaintenanceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_maintenance_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_maintenance_with_http_info(id, **kwargs)  # noqa: E501
@@ -345,11 +345,11 @@ class MaintenanceApi(object):
 
         Returns maintenance with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_maintenance_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_maintenance_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Identifier of the maintenance to be searched (required)
         :return: GetMaintenanceResponse
                  If the method is called asynchronously,
@@ -357,7 +357,7 @@ class MaintenanceApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -407,7 +407,7 @@ class MaintenanceApi(object):
             files=local_var_files,
             response_type='GetMaintenanceResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -418,18 +418,18 @@ class MaintenanceApi(object):
 
         List maintenance by type  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_maintenance(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_maintenance(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str type: Type of the maintenance list to be searched
         :return: ListMaintenanceResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_maintenance_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.list_maintenance_with_http_info(**kwargs)  # noqa: E501
@@ -440,11 +440,11 @@ class MaintenanceApi(object):
 
         List maintenance by type  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_maintenance_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_maintenance_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str type: Type of the maintenance list to be searched
         :return: ListMaintenanceResponse
                  If the method is called asynchronously,
@@ -452,7 +452,7 @@ class MaintenanceApi(object):
         """
 
         all_params = ['type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -498,7 +498,7 @@ class MaintenanceApi(object):
             files=local_var_files,
             response_type='ListMaintenanceResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -509,11 +509,11 @@ class MaintenanceApi(object):
 
         Update maintenance with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_maintenance(id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_maintenance(id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Identifier of the maintenance to be searched (required)
         :param UpdateMaintenancePayload body: Request payload of the maintenance object (required)
         :return: UpdateMaintenanceResponse
@@ -521,7 +521,7 @@ class MaintenanceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_maintenance_with_http_info(id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.update_maintenance_with_http_info(id, body, **kwargs)  # noqa: E501
@@ -532,11 +532,11 @@ class MaintenanceApi(object):
 
         Update maintenance with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_maintenance_with_http_info(id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_maintenance_with_http_info(id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: Identifier of the maintenance to be searched (required)
         :param UpdateMaintenancePayload body: Request payload of the maintenance object (required)
         :return: UpdateMaintenanceResponse
@@ -545,7 +545,7 @@ class MaintenanceApi(object):
         """
 
         all_params = ['id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -601,7 +601,7 @@ class MaintenanceApi(object):
             files=local_var_files,
             response_type='UpdateMaintenanceResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

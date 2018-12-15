@@ -38,11 +38,11 @@ class ScheduleRotationApi(object):
 
         Creates a new schedule rotation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_schedule_rotation(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_schedule_rotation(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param CreateScheduleRotationPayload body: Request payload of created schedule rotation (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -51,7 +51,7 @@ class ScheduleRotationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_schedule_rotation_with_http_info(identifier, body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_schedule_rotation_with_http_info(identifier, body, **kwargs)  # noqa: E501
@@ -62,11 +62,11 @@ class ScheduleRotationApi(object):
 
         Creates a new schedule rotation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_schedule_rotation_with_http_info(identifier, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_schedule_rotation_with_http_info(identifier, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param CreateScheduleRotationPayload body: Request payload of created schedule rotation (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -76,7 +76,7 @@ class ScheduleRotationApi(object):
         """
 
         all_params = ['identifier', 'body', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -134,7 +134,7 @@ class ScheduleRotationApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -145,11 +145,11 @@ class ScheduleRotationApi(object):
 
         Delete schedule rotation with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_schedule_rotation(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_schedule_rotation(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str id: Identifier of schedule rotation (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -158,7 +158,7 @@ class ScheduleRotationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_schedule_rotation_with_http_info(identifier, id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_schedule_rotation_with_http_info(identifier, id, **kwargs)  # noqa: E501
@@ -169,11 +169,11 @@ class ScheduleRotationApi(object):
 
         Delete schedule rotation with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_schedule_rotation_with_http_info(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_schedule_rotation_with_http_info(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str id: Identifier of schedule rotation (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -183,7 +183,7 @@ class ScheduleRotationApi(object):
         """
 
         all_params = ['identifier', 'id', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -241,7 +241,7 @@ class ScheduleRotationApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -252,11 +252,11 @@ class ScheduleRotationApi(object):
 
         Returns schedule rotation with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_schedule_rotation(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_schedule_rotation(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str id: Identifier of schedule rotation (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -265,7 +265,7 @@ class ScheduleRotationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_schedule_rotation_with_http_info(identifier, id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_schedule_rotation_with_http_info(identifier, id, **kwargs)  # noqa: E501
@@ -276,11 +276,11 @@ class ScheduleRotationApi(object):
 
         Returns schedule rotation with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_schedule_rotation_with_http_info(identifier, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_schedule_rotation_with_http_info(identifier, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str id: Identifier of schedule rotation (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
@@ -290,7 +290,7 @@ class ScheduleRotationApi(object):
         """
 
         all_params = ['identifier', 'id', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -348,7 +348,7 @@ class ScheduleRotationApi(object):
             files=local_var_files,
             response_type='GetScheduleRotationResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -359,11 +359,11 @@ class ScheduleRotationApi(object):
 
         Returns list of schedule rotations  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_schedule_rotations(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_schedule_rotations(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: ListScheduleRotationsResponse
@@ -371,7 +371,7 @@ class ScheduleRotationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_schedule_rotations_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.list_schedule_rotations_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -382,11 +382,11 @@ class ScheduleRotationApi(object):
 
         Returns list of schedule rotations  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_schedule_rotations_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_schedule_rotations_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str schedule_identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: ListScheduleRotationsResponse
@@ -395,7 +395,7 @@ class ScheduleRotationApi(object):
         """
 
         all_params = ['identifier', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -447,7 +447,7 @@ class ScheduleRotationApi(object):
             files=local_var_files,
             response_type='ListScheduleRotationsResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -458,11 +458,11 @@ class ScheduleRotationApi(object):
 
         Update schedule rotation with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_schedule_rotation(identifier, id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_schedule_rotation(identifier, id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str id: Identifier of schedule rotation (required)
         :param UpdateScheduleRotationPayload body: Request payload of update schedule rotation action (required)
@@ -472,7 +472,7 @@ class ScheduleRotationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_schedule_rotation_with_http_info(identifier, id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.update_schedule_rotation_with_http_info(identifier, id, body, **kwargs)  # noqa: E501
@@ -483,11 +483,11 @@ class ScheduleRotationApi(object):
 
         Update schedule rotation with given id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_schedule_rotation_with_http_info(identifier, id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_schedule_rotation_with_http_info(identifier, id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str id: Identifier of schedule rotation (required)
         :param UpdateScheduleRotationPayload body: Request payload of update schedule rotation action (required)
@@ -498,7 +498,7 @@ class ScheduleRotationApi(object):
         """
 
         all_params = ['identifier', 'id', 'body', 'schedule_identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -562,7 +562,7 @@ class ScheduleRotationApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

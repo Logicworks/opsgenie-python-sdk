@@ -38,18 +38,18 @@ class ScheduleApi(object):
 
         Creates a new schedule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_schedule(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_schedule(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param CreateSchedulePayload body: Request payload of created schedule (required)
         :return: CreateScheduleResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_schedule_with_http_info(body, **kwargs)  # noqa: E501
         else:
             (data) = self.create_schedule_with_http_info(body, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class ScheduleApi(object):
 
         Creates a new schedule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_schedule_with_http_info(body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_schedule_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param CreateSchedulePayload body: Request payload of created schedule (required)
         :return: CreateScheduleResponse
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class ScheduleApi(object):
         """
 
         all_params = ['body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -122,7 +122,7 @@ class ScheduleApi(object):
             files=local_var_files,
             response_type='CreateScheduleResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -133,11 +133,11 @@ class ScheduleApi(object):
 
         Delete schedule with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_schedule(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_schedule(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: SuccessResponse
@@ -145,7 +145,7 @@ class ScheduleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_schedule_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_schedule_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -156,11 +156,11 @@ class ScheduleApi(object):
 
         Delete schedule with given identifier  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_schedule_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_schedule_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: SuccessResponse
@@ -169,7 +169,7 @@ class ScheduleApi(object):
         """
 
         all_params = ['identifier', 'identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -221,7 +221,7 @@ class ScheduleApi(object):
             files=local_var_files,
             response_type='SuccessResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -232,11 +232,11 @@ class ScheduleApi(object):
 
         Returns an .ics file as byte array  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.export_schedule(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.export_schedule(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: str
@@ -244,7 +244,7 @@ class ScheduleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.export_schedule_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.export_schedule_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -255,11 +255,11 @@ class ScheduleApi(object):
 
         Returns an .ics file as byte array  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.export_schedule_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.export_schedule_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: str
@@ -268,7 +268,7 @@ class ScheduleApi(object):
         """
 
         all_params = ['identifier', 'identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -320,7 +320,7 @@ class ScheduleApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -331,11 +331,11 @@ class ScheduleApi(object):
 
         Returns schedule with given id or name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_schedule(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_schedule(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: GetScheduleResponse
@@ -343,7 +343,7 @@ class ScheduleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_schedule_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.get_schedule_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -354,11 +354,11 @@ class ScheduleApi(object):
 
         Returns schedule with given id or name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_schedule_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_schedule_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :return: GetScheduleResponse
@@ -367,7 +367,7 @@ class ScheduleApi(object):
         """
 
         all_params = ['identifier', 'identifier_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -419,7 +419,7 @@ class ScheduleApi(object):
             files=local_var_files,
             response_type='GetScheduleResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -430,11 +430,11 @@ class ScheduleApi(object):
 
         Returns schedule timeline with given id or name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_schedule_timeline(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_schedule_timeline(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :param list[str] expand: Returns more detailed response with expanding it. Possible values are 'base', 'forwarding', and 'override' which is also returned with expandable field of response
@@ -446,7 +446,7 @@ class ScheduleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_schedule_timeline_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.get_schedule_timeline_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -457,11 +457,11 @@ class ScheduleApi(object):
 
         Returns schedule timeline with given id or name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_schedule_timeline_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_schedule_timeline_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :param list[str] expand: Returns more detailed response with expanding it. Possible values are 'base', 'forwarding', and 'override' which is also returned with expandable field of response
@@ -474,7 +474,7 @@ class ScheduleApi(object):
         """
 
         all_params = ['identifier', 'identifier_type', 'expand', 'interval', 'interval_unit', 'date']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -535,7 +535,7 @@ class ScheduleApi(object):
             files=local_var_files,
             response_type='GetScheduleTimelineResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -546,18 +546,18 @@ class ScheduleApi(object):
 
         Returns list of schedule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_schedules(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_schedules(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param list[str] expand: Returns more detailed response with expanding it. Possible value is 'rotation' which is also returned with expandable field of response
         :return: ListSchedulesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_schedules_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.list_schedules_with_http_info(**kwargs)  # noqa: E501
@@ -568,11 +568,11 @@ class ScheduleApi(object):
 
         Returns list of schedule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_schedules_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_schedules_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param list[str] expand: Returns more detailed response with expanding it. Possible value is 'rotation' which is also returned with expandable field of response
         :return: ListSchedulesResponse
                  If the method is called asynchronously,
@@ -580,7 +580,7 @@ class ScheduleApi(object):
         """
 
         all_params = ['expand']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -627,7 +627,7 @@ class ScheduleApi(object):
             files=local_var_files,
             response_type='ListSchedulesResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -638,11 +638,11 @@ class ScheduleApi(object):
 
         Update schedule with given id or name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_schedule(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_schedule(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :param UpdateSchedulePayload body: Request payload of update schedule action
@@ -651,7 +651,7 @@ class ScheduleApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_schedule_with_http_info(identifier, **kwargs)  # noqa: E501
         else:
             (data) = self.update_schedule_with_http_info(identifier, **kwargs)  # noqa: E501
@@ -662,11 +662,11 @@ class ScheduleApi(object):
 
         Update schedule with given id or name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_schedule_with_http_info(identifier, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_schedule_with_http_info(identifier, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str identifier: Identifier of schedule which could be id or name (required)
         :param str identifier_type: Type of the identifier that is provided as an in-line parameter. Possible values are 'id' or 'name'
         :param UpdateSchedulePayload body: Request payload of update schedule action
@@ -676,7 +676,7 @@ class ScheduleApi(object):
         """
 
         all_params = ['identifier', 'identifier_type', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -730,7 +730,7 @@ class ScheduleApi(object):
             files=local_var_files,
             response_type='UpdateScheduleResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
